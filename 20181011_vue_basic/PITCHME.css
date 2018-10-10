@@ -2,3 +2,8 @@
   font-family: -apple-system, 'Sawarabi Gothic', BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
   text-transform: none;
 }
+
+.reveal blockquote {
+  width: 100%;
+  text-align: left;
+}
