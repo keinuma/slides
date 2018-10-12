@@ -51,10 +51,10 @@
 ---
 
 ### 中学生~高校生
-「宇宙ってどうなってるんだろう」
+「宇宙ってどうなってるんだろう」  
 「宇宙を勉強したい」
 
-![image](./image/skip_schoolboy.png)
+![image](20181016_self_introduction/image/skip_schoolboy.png)
 
 
 ---
