@@ -14,4 +14,4 @@ charts : true
 theme-override : 20181011_vue_basic/PITCHME.css
 
 # theme設定
-theme : beige
+theme : sky
