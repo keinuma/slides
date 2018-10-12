@@ -1,6 +1,3 @@
-# シンタックスハイライト
-highlight : sky
-
 # スライドのループの設定
 loop : true
 
