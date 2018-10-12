@@ -56,6 +56,14 @@
 
 ![image](20181016_self_introduction/image/skip_schoolboy.png)
 
+---
+
+### 大学生
+- 「物理辛くね」
+- 「波動方程式ってなんだよ」
+
+![image](20181016_self_introduction/image/fusagikomu_businesswoman.png)
+
 
 ---
 
