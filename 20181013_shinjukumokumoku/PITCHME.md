@@ -13,7 +13,7 @@
 
 ### Vue.js入門
 - Vueの基本から応用まで網羅
-- Atomic Designとかも書いてある
+- Atomic Designのような設計も書いてある
 
 ---
 
