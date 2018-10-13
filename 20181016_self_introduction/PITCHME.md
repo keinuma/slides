@@ -62,7 +62,7 @@
 「物理辛くね」  
 「波動関数…光電効果…」
 
-![image](20181016_self_introduction/image/fusagikomu_businesswoman.png)
+<img class=python src=20181016_self_introduction/image/fusagikomu_businesswoman.png>
 
 
 ---
