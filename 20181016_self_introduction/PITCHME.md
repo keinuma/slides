@@ -69,7 +69,7 @@
 
 ### 出会い
 
-[![image](20181016_self_introduction/image/python.png)](20181016_self_introduction/image/python.png))
+![image](20181016_self_introduction/image/python.png)
 
 ---
 
