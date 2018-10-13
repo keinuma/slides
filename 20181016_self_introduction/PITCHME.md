@@ -62,14 +62,14 @@
 「物理辛くね」  
 「波動関数…光電効果…」
 
-<img class=python src=20181016_self_introduction/image/fusagikomu_businesswoman.png>
+![image](20181016_self_introduction/image/fusagikomu_businesswoman.png)
 
 
 ---
 
 ### 出会い
 
-![image](20181016_self_introduction/image/python.png)
+[![image](20181016_self_introduction/image/python.png)](20181016_self_introduction/image/python.png))
 
 ---
 
