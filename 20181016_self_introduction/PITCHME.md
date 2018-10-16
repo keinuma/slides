@@ -74,8 +74,8 @@
 
 +++
 
-NASA推しのPythonと出会う
-データ分析で使用
+NASA推しのPythonと出会う  
+データ分析で使用  
 -> プログラミング面白い
 
 ---
@@ -105,7 +105,7 @@ NASA推しのPythonと出会う
 - Pythonでアプリ開発
 - できることは色々やってる
 
-![image](20181016_self_introduction/image/syokuji_computer)
+![image](20181016_self_introduction/image/syokuji_computer.png)
 
 ---
 
