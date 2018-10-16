@@ -65,18 +65,35 @@
 
 +++
 
-### 大学生 vol2.
+### 大学生 vol.2
 - 宇宙研究室に配属
 - 地球と宇宙の境界を調べてた
 - C++を初めて諦める
 
----
++++
 
 ---?image=20181016_self_introduction/image/python.png&size=50% 100%
 
 ---
 
 ### 社会人
+
++++
+
+### 1社目 vol.1
+- 某教育業界の開発会社()
+- 役割=PM
+- ワクワク
+
+![image](20181016_self_introduction/image/shinsyakaijin_run_man2.png)
+
++++
+
+### 1社目 vol.2
+- コードをかけない
+- 「Pythonなにそれおいしいの？」
+
+![image](20181016_self_introduction/image/business_syakai_aranami.png)
 
 ---
 
