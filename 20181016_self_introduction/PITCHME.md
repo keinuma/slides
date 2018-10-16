@@ -70,9 +70,13 @@
 - 地球と宇宙の境界を調べてた
 - C++を初めて諦める
 
++++?image=20181016_self_introduction/image/python.png&size=50% 100%
+
 +++
 
----?image=20181016_self_introduction/image/python.png&size=50% 100%
+NASA推しのPythonと出会う
+データ分析で使用
+-> プログラミング面白い
 
 ---
 
@@ -91,9 +95,17 @@
 
 ### 1社目 vol.2
 - コードをかけない
-- 「Pythonなにそれおいしいの？」
+- 「Python？なにそれおいしいの？」
 
 ![image](20181016_self_introduction/image/business_syakai_aranami.png)
+
++++
+
+### 2社目(現在)
+- Pythonでアプリ開発
+- できることは色々やってる
+
+![image](20181016_self_introduction/image/syokuji_computer)
 
 ---
 
@@ -103,7 +115,20 @@
 
 ### やりたいこと
 - いろんな技術をしる
-- おもろい開発
+- おもろくてワクワクする開発
+
++++
+
+### 具体的に
+- バックエンドからフロントまで学べて
+- 高頻度にレビュー（プロダクトも開発の流れも）を受けて
+- ユーザーに価値を届ける開発
+
++++
+
+### できないこと
+- お金を回すこと
+- リーダーてきな
 
 ---
 
