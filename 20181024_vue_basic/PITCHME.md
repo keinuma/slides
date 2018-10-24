@@ -106,7 +106,7 @@ display: none
 - イベントはJavaScriptのイベント属性
 
 フォームの入力を描画する例:
-```vue
+```html
 <input v-on:input="value=$event.target.value"/>
 {{ value }}
 ```
@@ -128,9 +128,12 @@ display: none
 
 `v-bind:value` + `v-on:change`
 
-です
 
 例:
 ```html
 <input v-model="value"/>
 ```
+
+---
+
+いじょうになります
