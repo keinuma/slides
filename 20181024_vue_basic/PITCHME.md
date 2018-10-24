@@ -144,7 +144,7 @@ display: none
 - シンタックスシュガー
 - 意味的には
 
-`v-bind:value` + `v-on:input`
+> `v-bind:value` + `v-on:input`
 
 ---
 
@@ -155,7 +155,7 @@ display: none
 
 <input v-model="value"/>
 
-<input v-model.lazy="value"/>
+<input v-model.lazy="value"/> // changeイベントの例
 ```
 
 ---
