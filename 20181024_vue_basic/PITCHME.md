@@ -113,6 +113,18 @@ display: none
 
 ---
 
+### changeイベント
+- フォーム入力で値が完全に更新された後に変更する場合は
+- `changeイベントを用いる`
+
+さっきの例:
+```html
+<input v-on:change="value=$event.target.value"/>
+{{ value }}
+```
+
+---
+
 ### イベントハンドリングの省略記法
 - `@`で書き換え可能ですね（ぱっと見わからない）
 ```html
