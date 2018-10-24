@@ -144,15 +144,18 @@ display: none
 - シンタックスシュガー
 - 意味的には
 
-`v-bind:value` + `v-on:change`
+`v-bind:value` + `v-on:input`
 
 ---
 
 例:
 
 ```html
-<input v-on:change="value = $event.target.value" v-bind:value="value"/>
+<input v-on:input="value = $event.target.value" v-bind:value="value"/>
+
 <input v-model="value"/>
+
+<input v-model.lazy="value"/>
 ```
 
 ---
