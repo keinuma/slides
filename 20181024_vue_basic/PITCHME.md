@@ -114,10 +114,15 @@ display: none
 ---
 
 ### イベントハンドリングの省略記法
-- `@`で書き換え可能
+- `@`で書き換え可能ですね（ぱっと見わからない）
 ```html
 <input @input="value=$event.target.value"/>
 {{ value }}
+```
+
+- よく見る
+```html
+<button @click="login"></button>
 ```
 
 ---
