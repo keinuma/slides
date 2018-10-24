@@ -6,6 +6,8 @@
 ---
 
 ### 2.9章 ディレクティブ
+ディレクティブ とは？？
+
 ```html
 <a href="https://google.com" v-bind:class="hogehoge"></a>
 ```
