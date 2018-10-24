@@ -141,13 +141,17 @@ display: none
 
 ### フォーム入力バインディング
 - `v-model`は双方向バインディング
+- シンタックスシュガー
 - 意味的には
 
 `v-bind:value` + `v-on:change`
 
+---
 
 例:
+
 ```html
+<input v-on:change="value = $event.target.value" v-bind:value="value"/>
 <input v-model="value"/>
 ```
 
