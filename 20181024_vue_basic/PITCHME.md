@@ -25,6 +25,11 @@ Vue版属性値的な
 - `v-if`と`v-show`がある
 - 引数に条件式を入れて評価する
 
+例:
+```html
+<p v-show="isWinter">さむい</p>
+```
+
 ---
 
 ### ifとshowの使い分け
@@ -49,7 +54,7 @@ display: none
  
  例:
  ```html
-<p v-bind:class="{shark: true, mecha: false}">
+<p v-bind:class="{tag: true, mecha: false}">
   テキスト
 </p>
 ```
@@ -71,7 +76,7 @@ display: none
 
 例:
 ```html
-<p :class="{shark: true, mecha: false}">
+<p :class="{tag: true, mecha: false}">
   テキスト
 </p>
 ```
@@ -84,7 +89,7 @@ display: none
 - v`-bind:key`を使って要素の変更を追跡している
 
 例: 
-```vue
+```html
 <ul>
   <li
     v-for="item in arr" v-bind:key="item"
@@ -110,7 +115,7 @@ display: none
 
 ### イベントハンドリングの省略記法
 - `@`で書き換え可能
-```vue
+```html
 <input @input="value=$event.target.value"/>
 {{ value }}
 ```
@@ -126,6 +131,6 @@ display: none
 です
 
 例:
-```vue
+```html
 <input v-model="value"/>
 ```
