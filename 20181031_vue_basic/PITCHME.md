@@ -52,11 +52,11 @@ Vue.component('item-desc',  // 子供Componentの名前
 ---
 
 ```html
-<div id="app">
-  <item-desc
+<template>
+<item-desc 
     v-bind:item-name="MyItem"
-  ></item-desc>
-</div>
+></item-desc>
+</template>
 
 <script>
 new Vue({
@@ -70,13 +70,13 @@ new Vue({
 
 ---
 
-## 子供から親へイベントを送る
+### 子供から親へイベントを送る
 - 子から親へは `$emit` メソッドを使ってカスタムイベントを送る
 - 親は `v-on` で受け取っと処理する
 
 ---
 
-## 子供の定義
+### 子供の定義
 - 子供にボタンを配置
 - ボタンが押されたら親にイベント `increment` を発火する
 
@@ -106,7 +106,7 @@ Vue.component('item-desc',  // 子供Componentの名前
 
 ---
 
-## 親の定義
+### 親の定義
 - 子供から `increment` イベントで監視
 - イベントが来たら `doInc` メソッドを呼び出し
 - `data` の変更は子供に反映される
@@ -139,13 +139,13 @@ new Vue({
 
 ---
 
-## `props` と イベント使わないとき
+### `props` と イベントを使わないとき
 - `this.$parent` とかでアクセスできる
 - けどやっちゃダメ
 
 ---
 
-## 親子以外とやりとりするとき
+### 親子以外とやりとりするとき
 - 複雑になるときはステートを導入する
 - Vuexを使おう
 
