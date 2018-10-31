@@ -26,7 +26,7 @@ Vue.jsでは
 - `props` に `itemName` を加える
     - 必須かつ文字列
 
-```javascript
+```vuejs
 <script>
 Vue.component('item-desc',  // 子供Componentの名前
   props: {
