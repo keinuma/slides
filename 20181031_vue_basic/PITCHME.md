@@ -26,6 +26,8 @@ Vue.jsでは
 - `props` に `itemName` を加える
     - 必須かつ文字列
 
+---
+
 ```html
 <script>
 Vue.component('item-desc',  // 子供Componentの名前
@@ -42,9 +44,12 @@ Vue.component('item-desc',  // 子供Componentの名前
 ---
 
 ### 親の定義
+
 - 子供コンポーネントをHTML内で使用する
 - `v-bind` で自分のデータを `props` に渡す
 - `itemName` は属性ではケバブケースになる
+
+---
 
 ```html
 <div id="app">
@@ -75,6 +80,8 @@ new Vue({
 - 子供にボタンを配置
 - ボタンが押されたら親にイベント `increment` を発火する
 
+---
+
 ```html
 <div id="child">
   <button v-on:click="eventFunc">押してね</button>
@@ -103,6 +110,8 @@ Vue.component('item-desc',  // 子供Componentの名前
 - 子供から `increment` イベントで監視
 - イベントが来たら `doInc` メソッドを呼び出し
 - `data` の変更は子供に反映される
+
+---
 
 ```html
 <div id="app">
