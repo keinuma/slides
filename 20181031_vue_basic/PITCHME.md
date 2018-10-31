@@ -26,7 +26,7 @@ Vue.jsでは
 - `props` に `itemName` を加える
     - 必須かつ文字列
 
-```html
+```javascript
 <script>
 Vue.component('item-desc',  // 子供Componentの名前
   props: {
@@ -52,6 +52,9 @@ Vue.component('item-desc',  // 子供Componentの名前
     v-bind:item-name="MyItem"
   ></item-desc>
 </div>
+```
+
+```javascript
 <script>
 new Vue({
   el: #app,
@@ -78,7 +81,9 @@ new Vue({
 <div id="child">
   <button v-on:click="eventFunc">押してね</button>
 </div>
+```
 
+```javascript
 <script>
 Vue.component('item-desc',  // 子供Componentの名前
   props: {
@@ -110,6 +115,9 @@ Vue.component('item-desc',  // 子供Componentの名前
     v-on:increment="doInc"
   ></item-desc>
 </div>
+```
+
+```javascript
 <script>
 new Vue({
   el: #app,

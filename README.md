@@ -6,4 +6,4 @@ LT・勉強会用の資料置き場
 - [Shinjukumokumoku](https://gitpitch.com/keinuma/slides?p=20181013_shinjukumokumoku)
 - [自己紹介LT](https://gitpitch.com/keinuma/slides?p=20181016_self_introduction)
 - [Vue入門第一回](https://gitpitch.com/keinuma/slides?p=20181024_vue_basic)
-- [Vue入門第二回](https://gitpitch.com/keinuma/slides?p=20181024_vue_basic)
+- [Vue入門第二回](https://gitpitch.com/keinuma/slides?p=20181031_vue_basic)
