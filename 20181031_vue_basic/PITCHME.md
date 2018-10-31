@@ -140,14 +140,21 @@ new Vue({
 ---
 
 ### `props` と イベントを使わないとき
-- `this.$parent` とかでアクセスできる
+- 子供から `this.$parent` とかでアクセスできる
 - けどやっちゃダメ
 
 ---
 
 ### 親子以外とやりとりするとき
 - 複雑になるときはステートを導入する
-- Vuexを使おう
+- Vuexを使おう (7章参照)
+
+---
+
+### `props`を双方向バインディングする
+
+- `$emit()` と同時に `props` を変えたいとき
+- [詳しくはこちら](https://jp.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A3%BE%E5%AD%90)
 
 ---
 
