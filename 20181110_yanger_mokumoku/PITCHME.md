@@ -162,7 +162,7 @@ $ sceptre delete-env dev
 ### つらいところ
 - デバッグ(CloudFormation)
 - ドキュメントを細部までみないといけない
-  - RDSのパラメータはみれてもAuroraの場合などはわからない
+  - RDSのパラメータがわかってもAuroraの変更点は調べないと…
 
 ---
 
