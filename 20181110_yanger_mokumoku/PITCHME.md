@@ -74,7 +74,7 @@
 ### 解決策
 - Pythonで書いてみる
 - [sceptre](https://github.com/cloudreach/sceptre): PythonによるCLIツール
-- [troposphere](https://github.com/cloudtools/troposphere): Jinja2によるテンプレート記法
+- [troposphere](https://github.com/cloudtools/troposphere): CloudFormationのPython記法
 
 ---
 
