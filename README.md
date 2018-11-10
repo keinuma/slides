@@ -7,3 +7,4 @@ LT・勉強会用の資料置き場
 - [自己紹介LT](https://gitpitch.com/keinuma/slides?p=20181016_self_introduction)
 - [Vue入門第一回](https://gitpitch.com/keinuma/slides?p=20181024_vue_basic)
 - [Vue入門第二回](https://gitpitch.com/keinuma/slides?p=20181031_vue_basic)
+- [若手もくもく会](https://gitpitch.com/keinuma/slides?p=20181110_yanger_mokumoku)
