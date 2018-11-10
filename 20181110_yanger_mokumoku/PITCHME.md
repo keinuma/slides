@@ -41,6 +41,7 @@
 ---
 
 リーダー以外「要件が決まってきたからAWS環境構築が欲しいです」  
+  
 リーダー「同時には無理だわ」
 
 ---
@@ -54,6 +55,10 @@
 ---
 
 ### Infrastructure as Codeの出番
+
+---
+
+CloudFormation vs Terraform
 
 ---
 
