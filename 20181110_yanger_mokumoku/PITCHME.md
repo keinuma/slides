@@ -81,6 +81,8 @@
 ### Troposphereの例
 
 ---
+- ACMを作ってみる
+- テンプレートの初期化、パラメータの注入
 
 ```python
 from troposphere import Parameter
@@ -102,6 +104,8 @@ class CertificateManager:
 
 ---
 
+- 作成するリソースの設定
+
 ```python
     def add_resources(self):
         self.certificate = self.template.add_resource(
@@ -117,7 +121,12 @@ class CertificateManager:
                 ],
             )
         )
+```
+---
 
+- 他リソースへ変数として受け渡す
+
+```python
     def add_outputs(self):
         self.template.add_output([
             Output(
@@ -147,6 +156,8 @@ $ sceptre delete-env dev
 - ライブラリのコードを見ればパラメータがわかる
 - Sceptreは環境変数やHookなどのオプション多彩
 - Pythonのスクリプトを使える
+
+---
 
 ### つらいところ
 - デバッグ(CloudFormation)
