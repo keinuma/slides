@@ -42,7 +42,7 @@
 
 リーダー以外「要件が決まってきたからAWS環境構築が欲しいです」  
   
-リーダー「同時には無理だわ」
+リーダー「同時には無理」
 
 ---
 
@@ -58,11 +58,99 @@
 
 ---
 
-### CloudFormation vs Terraform
-
+### CloudFormationを導入
+- チームでテンプレートを用意
+- 案件に合わせて修正
 
 ---
 
+### つらいこと
+- パラメータを調べること
+- YAMLの読み書き
+
+---
+
+### 解決策
+- Pythonで書いてみる
+- [sceptre](https://github.com/cloudreach/sceptre): PythonによるCLIツール
+- [troposphere](https://github.com/cloudtools/troposphere): Jinja2によるテンプレート記法
+
+---
+
+### Troposphereの例
+
+---
+
+```python
+from troposphere import Parameter
+from troposphere import Template
+
+class CertificateManager:
+    def __init__(self):
+        self.template = Template()
+        self.template.add_description('Certificate Manager')
+
+    def add_parameters(self):
+        self.domain_name = self.template.add_parameter(
+            Parameter(
+                'DomainName',
+                Type='String',
+                Description='DomainName',
+            ))
+```
+
+---
+
+```python
+    def add_resources(self):
+        self.certificate = self.template.add_resource(
+            Certificate(
+                'Cert',
+                DomainName=self.cert_domain,
+                ValidationMethod='DNS',
+                DomainValidationOptions=[
+                    DomainValidationOption(
+                        DomainName=self.cert_domain,
+                        ValidationDomain=Ref(self.domain_name)
+                    )
+                ],
+            )
+        )
+
+    def add_outputs(self):
+        self.template.add_output([
+            Output(
+                'CertificateArn',
+                Value=Ref(self.certificate),
+            ),
+            Output(
+                'CertDomain',
+                Value=self.cert_domain,
+            )
+        ])
+
+```
+
+---
+
+### Sceptre
+- 開発環境を構築してみる
+
+```bash
+$ sceptre delete-env dev
+```
+
+---
+
+### よかったこと
+- ライブラリのコードを見ればパラメータがわかる
+- Sceptreは環境変数やHookなどのオプション多彩
+- Pythonのスクリプトを使える
+
+### つらいところ
+- デバッグ(CloudFormation)
+- ドキュメントを細部までみるところ
+  - RDSのパラメータはみれてもAuroraの場合などはわからない
 
 ---
 
