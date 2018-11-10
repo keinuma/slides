@@ -1,4 +1,4 @@
-## AWSの環境構築の話
+## インフラ自動化
 
 2018/11/11  
 @keinuma
@@ -48,17 +48,21 @@
 
 ### 課題
 - インフラ構築できる人が1人
-- バス係数が低すぎる
+- バス係数が低すぎる 
 - 環境をアップデートすることもままならない
 - だいたい同じ構成になることが多い
 
 ---
 
-### Infrastructure as Codeの出番
+### Infrastructure as Code
 
 ---
 
-CloudFormation vs Terraform
+### CloudFormation vs Terraform
+
+
+---
+
 
 ---
 
