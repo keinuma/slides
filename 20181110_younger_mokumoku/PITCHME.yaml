@@ -1,0 +1,17 @@
+# シンタックスハイライト
+highlight : monokai
+
+# スライドのループの設定
+loop : true
+
+# トランジションの設定
+transition : slide
+
+# グラフ機能の設定
+charts : true
+
+# カスタムCSSの設定
+theme-override : 20181011_vue_basic/PITCHME.css
+
+# theme設定
+theme : beige
