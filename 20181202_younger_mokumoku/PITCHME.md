@@ -63,7 +63,7 @@
 
 ---
 
-![TAG](./assets/img/TAG.png)
+![TAG](assets/img/TAG.png)
 
 ---
 
