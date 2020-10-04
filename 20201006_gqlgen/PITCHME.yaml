@@ -1,0 +1,15 @@
+gitpitch: 4.0
+
+published: true
+
+theme-override : 20201006_gqlgen/PITCHME.css
+
+title: "GoによるGraphQLの実装"
+
+lang : "ja"
+
+highlight : monokai
+
+theme : beige
+
+transition : slide
