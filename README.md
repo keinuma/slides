@@ -9,3 +9,9 @@ LT・勉強会用の資料置き場
 - [Vue入門第二回](https://gitpitch.com/keinuma/slides?p=20181031_vue_basic)
 - [若手もくもく会11月](https://gitpitch.com/keinuma/slides?p=20181110_younger_mokumoku)
 - [若手もくもく会12月](https://gitpitch.com/keinuma/slides?p=20181202_younger_mokumoku)
+- [gqlgenの実装](https://gitpitch.com/keinuma/slides?p=20201006_gqlgen)
+
+# ローカル起動
+```bash
+$ docker run -it -v $PWD:/slides -p 9000:9000 gitpitch/trial
+```

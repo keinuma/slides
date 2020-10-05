@@ -1,9 +1,12 @@
+[drag=300 30, drop=center, flow=col true]
+
 ## GoによるGraphQLの実装
 
-2020/10/6
-沼田
+2020/10/6 沼田
 
 ---
+
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 自己紹介
 
@@ -15,6 +18,7 @@
 | 言語 | JavaScript, Golang |
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### アジェンダ
 - GraphQLとは
@@ -25,6 +29,7 @@
 - 今回の設計のPros Cons
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### GraphQLとは
 - Facebookが開発したWeb APIのための規格
@@ -32,6 +37,7 @@
 - スキーマとクエリからなる
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### スキーマ
 - データ、APIのインターフェースを定義
@@ -54,6 +60,7 @@ type Mutation {
 ```
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### クエリ
 - スキーマ定義をもとに定義
@@ -68,6 +75,7 @@ query GetTodos {
 ```
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### GraphQLの特徴
 - エンドポイントが一つ
@@ -77,12 +85,14 @@ query GetTodos {
 - クエリの柔軟性が高い
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### Goを使うメリット
 - Goの構造体とGraphQLのスキーマのマッピング
 - リゾルバーに依存性逆転の法則を適用
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### （他の言語の例）
 - Ruby
@@ -93,6 +103,7 @@ query GetTodos {
   - Apolloのコアシステムを利用できる
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### GraphQL + Goの実装方法
 - BaaS or 独力で実装
@@ -100,11 +111,13 @@ query GetTodos {
 - GraphQLの実装がシンプルな場合、BaaSがよさそう
 
 ---
+[drag=100, pad=50px, fit=scale]
 
 ### BaaSの例
+
 - [AppSync](https://aws.amazon.com/jp/appsync/)
   - AWS提供のマネージドサービス
-  DynamoDB, LambdaなどAWSのサービスと連携できる
+  - DynamoDB, LambdaなどAWSのサービスと連携できる
 - [Hasura](https://hasura.io/)
   - Heroku＋PostgresQLによるマネージドサービス
   - データベースのテーブルを定義するとAPIを生成できる
@@ -113,6 +126,7 @@ query GetTodos {
   - 2系はGraphQLかかわらずTypeScriptによるORM + Clientを提供している
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 独力で実装する場合
 - スキーマファーストかコードファーストを選択
@@ -122,41 +136,49 @@ query GetTodos {
   - 開発フローが一方向になる
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### コードファーストのライブラリ
+
 - [graphql-go](https://github.com/graphql-go/graphql)
   - スキーマとリゾルバーをコードで表現し、スキーマを出力
-
 - [thunder](samsarahq/thunder https://github.com/samsarahq/thunder)
   - Goのstructからスキーマを生成する
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### スキーマファーストのライブラリ
+
 - [graph-gophers/graphql-go](https://github.com/graph-gophers/graphql-go)
   - ランタイム時にスキーマとコードをチェック
 - [gqlgen](https://github.com/99designs/gqlgen/)
   - CLIからスキーマをコードに変換
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### gqlgenのいいところ
+
 - GraphQLのサポート範囲が広い
 - 型安全
 - 自動生成を利用しやすい
 
 ---
+[drag=100, drop=center, pad=20px, fit=scale]
 
 ### GraphQLのサポート範囲が広い
 [![Image from Gyazo](https://i.gyazo.com/7caa91278032fe19c98080300c374d1f.png)](https://gyazo.com/7caa91278032fe19c98080300c374d1f)
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 型安全
 - CLI実行時に型の整合性を取れる
 - `interface{}` は発生しない
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 自動生成を利用しやすい
 - 自動生成は二種類
@@ -165,6 +187,7 @@ query GetTodos {
 - スキーマとGoの差分がある場合は差分を埋めるためのコードが出力される
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 - Goのプロパティが不足している状態でコードを出力する
 
@@ -184,6 +207,7 @@ type Todo struct {
 ```
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 - コードに不足している `Done` を埋めるためのリゾルバーが出力される
 
@@ -195,6 +219,7 @@ func (t *TodoResolver) Done(ctx context.Context, *model.Todo) (bool, error) {
 ```
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### gqlgenの実装例
 - [サンプルリポジトリ](https://github.com/keinuma/tech-story)
@@ -204,6 +229,7 @@ func (t *TodoResolver) Done(ctx context.Context, *model.Todo) (bool, error) {
   - DB: MySQL
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 設計トピック
 - ドメイン3層 + GraphQL
@@ -211,6 +237,7 @@ func (t *TodoResolver) Done(ctx context.Context, *model.Todo) (bool, error) {
 - スキーマとのマッピング
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### ドメイン3層 + GraphQL
 - model + service + repository
@@ -220,13 +247,14 @@ func (t *TodoResolver) Done(ctx context.Context, *model.Todo) (bool, error) {
 - 実態はinfra層に実装
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### GraphQLのResolverをControllerとして利用
 - Resolverからドメインのpresenter層を実行する
 - presenterは必要なservice層を保持している
 
 ```go
-func (r *mutationResolver) CreateStory(ctx context.Context, input request.NewStory) (*model.Story, error) {
+func (r *resolver) CreateStory(ctx context.Context, input request.NewStory) (*model.Story, error) {
     storyPresenter := presenter.NewStory(*service.NewStory(gateway.NewStory(ctx, r.DB)))
     story, err := storyPresenter.CreateStory(input)
     if err != nil {
@@ -237,12 +265,14 @@ func (r *mutationResolver) CreateStory(ctx context.Context, input request.NewSto
 ```
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### スキーマとのマッピング
 - GraphQLのtypeとmodel層をマッピング
 - GraphQLのinputとpresenter層をマッピング
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 実装のユースケース
 - 認証
@@ -250,6 +280,7 @@ func (r *mutationResolver) CreateStory(ctx context.Context, input request.NewSto
 - エラーハンドリング
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 認証
 - firebase authを利用
@@ -257,6 +288,7 @@ func (r *mutationResolver) CreateStory(ctx context.Context, input request.NewSto
 - トークン取得後はユーザー情報をResolverに格納して各APIに渡している
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 権限
 - Schemaにディレクティブを設定
@@ -272,6 +304,7 @@ enum Role {
 ```
 
 ---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### エラーハンドリング
 - Resolverのcontextに対してエラーを詰めていく
@@ -297,6 +330,9 @@ func (r Query) DoThings(ctx context.Context) (bool, error) {
     return false, gqlerror.Errorf("BOOM! Headshot")
 }
 ```
+
+---
+[drag=100, drop=center, pad=100px, fit=scale]
 
 ### 今回の設計のPros Cons
 - Pros
