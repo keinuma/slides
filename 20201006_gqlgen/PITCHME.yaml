@@ -8,8 +8,15 @@ title: "GoによるGraphQLの実装"
 
 lang : "ja"
 
-highlight : monokai
+highlight : tomorrow
 
-theme : beige
-
-transition : slide
+theme-background: [ "#323437" ]
+theme-headline: [ "Montserrat", "#82F2A0", "none", "#FFFFFF", "100", "120", "15" ]
+theme-byline: [ "Montserrat", "#FFFFFF", "none", "#82F2A0", "100", "110", "15" ]
+theme-text: [ "Ubuntu", "#FFFFFF", "none", "#F9F871", "100", "100", "15" ]
+theme-links: [ "#5289F7", "#5254F7" ]
+theme-code: [ "Source Code Pro", "100", "120" ]
+theme-controls: [ "#C0C0C0" ]
+theme-margins: [ "0", "15px" ]
+layout: center
+layout: center
