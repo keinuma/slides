@@ -196,9 +196,34 @@ query GetTodos {
 
 ---
 [drag=100, drop=center, fit=1.3]
-## gqlgenのいいところ
+## gqlgen
 
 ---
+
+[drag=80 20, drop=top, pad=0px]
+## gqlgenの使い方
+
+@ul[list-spaced-sm-bullets, drag=80 100, drop=center, fit=1.5](false)
+- スキーマを定義
+- `gqlgen` コマンドを実行
+@ul
+
+
+---
+
+[drag=80 20, drop=top, pad=0px]
+## 生成されるファイル
+
+@ul[list-spaced-sm-bullets, drag=80 100, drop=10 10, fit=1.5](false)
+- `model.go` : スキーマに定義されているデータファイル
+- `generated.go`: GraphQLリクエストからリゾルバーを実行
+- `resolver.go`: GraphQLの返り値にデータをマッピング
+@ul
+
+---
+
+[drag=80 20, drop=top, pad=0px]
+## gqlgenの利点
 
 @ul[list-spaced-sm-bullets, drag=80 100, drop=center, fit=1.5](false)
 - GraphQLのサポート範囲が広い
@@ -307,25 +332,22 @@ func (t *TodoResolver) Done(ctx context.Context, *model.Todo) (bool, error) {
 @ul
 
 ---
-[drag=80 20, drop=top, pad=0px]
-## GraphQL ResolverをControllerに
 
-@ul[list-spaced-sm-bullets, drag=90 100, drop=center, fit=1.3](false)
-- Resolverからドメインのpresenter層を実行する
-- presenterは必要なservice層を保持している
+![drag=40 90, drop=0 5, fit=1.0, stretch=true](20201006_gqlgen/image/domain-architecture.png)
+
+@ul[list-spaced-sm-bullets, drag=90 100, drop=25 5, fit=1.3](false)
+- リクエストからControllerを実行
+- Repositoryはインターフェースのみ
+- InfraでDBの処理を実行
 @ul
 
 ---
 
-![drag=90 90, drop=5 5, fit=1.0, stretch=true](https://i.gyazo.com/744463150a0267c993c6b8f25673f55d.png)
+![drag=40 90, drop=0 5, fit=1.0, stretch=true](20201006_gqlgen/image/domain-architecture_graphql.png)
 
----
-[drag=80 20, drop=top, pad=0px]
-## スキーマとのマッピング
-
-@ul[list-spaced-sm-bullets, drag=80 100, drop=center, fit=1.5](false)
-- GraphQLのtypeとmodel層をマッピング
-- GraphQLのinputとpresenter層をマッピング
+@ul[list-spaced-sm-bullets, drag=90 100, drop=25 5, fit=1.3](false)
+- Controller→Resolver
+- Model→GraphQL Model
 @ul
 
 ---
