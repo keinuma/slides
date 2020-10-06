@@ -25,8 +25,8 @@
 1. GraphQL
 2. Goを使うメリット
 3. GraphQL + Goの実装方法
-4. gqlgenのいいところ
-5. gqlgenを使った実装例
+4. gqlgen
+5. gqlgenの実装例
 6. まとめ
 @ul
 
@@ -54,22 +54,7 @@
 
 ---
 
-[drag=80 99, drop=center, fit=1.1]
-```graphql
-type Todo {
-    id: ID!
-    status: Int!
-    text: String
-}
-
-type Query {
-    getTodos: [Todo!]!
-}
-
-type Mutation {
-    createTodo(status: Int): Todo!
-}
-```
+![drag=50 80, drop=center, fit=1.0, stretch=true](https://i.gyazo.com/2c11116910aef4ca45fcfc37d8f9118d.png)
 
 ---
 [drag=50 20, drop=top, pad=0px]
@@ -82,14 +67,12 @@ type Mutation {
 
 ---
 
-[drag=80 99, drop=center, fit=1.1]
-```js
-query GetTodos {
-    getTodos {
-        id
-    }
-}
-```
+![drag=30 35, drop=10 30, fit=0.7, stretch=true](https://i.gyazo.com/fa660c9143e58a578b45328cfc8aa972.png)
+
+[drag=30 35, drop=35 30, fit=1.5, stretch=true]
+=>
+
+![drag=25 80, drop=60 10, fit=0.7, stretch=true](https://i.gyazo.com/1fa89e6ddc219f4c7ec6ad63667c11dc.png)
 
 ---
 [drag=50 20, drop=top, pad=0px]
@@ -97,7 +80,7 @@ query GetTodos {
 
 @ul[list-spaced-sm-bullets, drag=100 100, drop=0 0, fit=1.5](false)
 - エンドポイントが一つ (`/graphql`)
-- クライアント（GraphiQL）が提供されている
+- APIクライアント（GraphiQL）が提供されている
 - スキーマ定義、拡張が豊富
 - クエリの柔軟性が高い
 @ul
@@ -113,20 +96,6 @@ query GetTodos {
 - Goの構造体とGraphQLのスキーマをマッピング可能
 - リゾルバーをダックタイピングで実装
 - GraphQLの複雑性を構造化する
-@ul
-
----
-[drag=50 20, drop=top, pad=0px]
-
-## （他の言語の例）
-
-@ul[drag=100 100, drop=0 0, fit=1.5](false)
-- Ruby
-  - [graphql-ruby](https://github.com/rmosolgo/graphql-ruby)
-  - GitHub API v4に使用されている
-- Node
-  - [apollo-server](https://github.com/apollographql/apollo-server)
-  - Apolloのコアシステムを利用できる
 @ul
 
 ---
@@ -147,16 +116,13 @@ query GetTodos {
 
 ## BaaSの例
 
-@ul[drag=90 100, drop=5 10, fit=1.3](false)
+@ul[list-spaced-sm-bullets, drag=90 100, drop=5 5, fit=1.3](false)
 - [AppSync](https://aws.amazon.com/jp/appsync/)
   - AWS提供のマネージドサービス
   - DynamoDB, LambdaなどAWSのサービスと連携できる
 - [Hasura](https://hasura.io/)
   - Heroku＋PostgresQLによるマネージドサービス
   - データベースのテーブルを定義するとAPIを生成できる
-- [Prisma](https://www.prisma.io/)
-  - 1系はRDBによるGraphQLビルダー
-  - 2系はGraphQLかかわらずTypeScriptによるORM + Clientを提供している
 @ul
 
 ---
@@ -216,8 +182,8 @@ query GetTodos {
 
 @ul[list-spaced-sm-bullets, drag=80 100, drop=10 10, fit=1.5](false)
 - `model.go` : スキーマに定義されているデータファイル
-- `generated.go`: GraphQLリクエストからリゾルバーを実行
 - `resolver.go`: GraphQLの返り値にデータをマッピング
+- `generated.go`: リクエストパラメータからモデルを生成（編集しない）
 @ul
 
 ---
@@ -252,9 +218,6 @@ query GetTodos {
 ## 自動生成を利用しやすい
 
 @ul[list-spaced-sm-bullets, drag=80 100, drop=10 5, fit=1.3](false)
-- 自動生成は二種類
-  - 開発者が変更しないファイル
-  - 開発者が実装を積み重ねるファイル
 - スキーマとGoの差分がある場合は差分を埋めるためのコードが出力される
 @ul
 
@@ -336,7 +299,8 @@ func (t *TodoResolver) Done(ctx context.Context, *model.Todo) (bool, error) {
 ![drag=40 90, drop=0 5, fit=1.0, stretch=true](20201006_gqlgen/image/domain-architecture.png)
 
 @ul[list-spaced-sm-bullets, drag=90 100, drop=25 5, fit=1.3](false)
-- リクエストからControllerを実行
+- APIリクエスト時にControllerを実行
+- PresenterはResponseを生成
 - Repositoryはインターフェースのみ
 - InfraでDBの処理を実行
 @ul
@@ -349,6 +313,7 @@ func (t *TodoResolver) Done(ctx context.Context, *model.Todo) (bool, error) {
 - Controller→Resolver
 - Model→GraphQL Model
 @ul
+
 
 ---
 [drag=80 20, drop=top, pad=0px]
