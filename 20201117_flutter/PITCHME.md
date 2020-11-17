@@ -1,6 +1,6 @@
 [drag=300 30, drop=center, flow=col true]
 
-## Flutter と React Native 比較してみた
+## Flutter と React Native 比較
 
 2020/11/17 沼田
 
@@ -21,9 +21,8 @@
 ## 結論
 
 @ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
-- Flutterはアプリ開発に必要な機能、運用フローが整っている
+- Flutterはエコシステムが充実していてアプリ開発に必要な機能が整っている
 - 日本の事例が少ないが今後も増えてきそう
-- JavaScript資産をどのくらい使いたいかでReact Nativeと棲み分けになりそう
 @ul
 
 ---
@@ -313,6 +312,14 @@ class MyAppBar extends StatelessWidget {
 - React NativeはJestや複数のライブラリに依存している
 - Flutterは公式パッケージ内で各レイヤのテストが完結する
 @ul
+
+---
+
+[drag=50 20, drop=top, pad=0px]
+## React Nativeとの棲み分けは？
+- エコシステムの観点だとFlutterに軍配が上がりそう
+- JavaScript資産をWebと共有したい場合はReact Nativeが良さそう
+- Flutter for webに期待
 
 ---
 
