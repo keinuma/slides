@@ -38,6 +38,7 @@ React Nativeで補えない部分はExpoと比較してお話します
 ## 比較ポイント
 
 @ul[list-spaced-sm-bullets, drag=100 100, drop=-5 10, fit=1.6](false)
+1. 　基本情報
 1. 　開発環境
 2. 　UI
 3. 　状態管理
@@ -48,7 +49,7 @@ React Nativeで補えない部分はExpoと比較してお話します
 ---
 
 [drag=100, drop=center, fit=1.3]
-そもそも
+## 基本情報
 
 ---
 
@@ -56,8 +57,7 @@ React Nativeで補えない部分はExpoと比較してお話します
 |  | Flutter | React Native |
 | --- | --- | --- |
 | 企業 | Google | Facebook |
-| 言語 | Dart | React Native |
-| アーキテクチャ | Reactive | Reactive |
+| 言語 | Dart | JavaScript |
 | GitHubスター数 | 107k | 91.3k |
 
 ---
@@ -135,7 +135,7 @@ flutter: # アプリの基本Theme、フォントの情報を追加できる
 ## React Native
 
 @ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
-- ネイティブのレンダリングエンジンを利用
+- Reactのコア部分を利用してレンダリング
 - React NativeのコンポーネントがネイティブのUIと一致している
   - React NativeのView は Androidの `android.view` であり iOSの `UIView`
 @ul
