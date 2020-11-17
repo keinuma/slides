@@ -11,7 +11,7 @@
 
 @ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
 - カミナシではReact Native + Expoを利用してる
-- FlutterはReact Nativeと比較すると何が嬉しい？
+- FlutterはReact Nativeと比較すると何が嬉しいか知りたい
 - 開発・運用観点でまとめてみた
 @ul
 
@@ -43,7 +43,6 @@ React Nativeで補えない部分はExpoと比較してお話します
 2. 　UI
 3. 　状態管理
 4. 　テスト
-5. 　情報収集
 @ul
 
 ---
@@ -74,7 +73,7 @@ React Nativeで補えない部分はExpoと比較してお話します
 - パッケージ管理は npm or yarn
 - Lint + Formatter は ESLint + Prettier
 - ホットリロード
-- リリースはExpo CLIが便利
+- 開発、リリースはExpo CLIが便利
 @ul
 
 ---
@@ -173,7 +172,7 @@ flutter: # アプリの基本Theme、フォントの情報を追加できる
 - Styleを使ってCSS Likeにレイアウト、見た目を変えられる
 - 宣言的な記述
 - React Native自体は最低限のコンポーネントのみ
-  - UIコンポーネントを利用することが多い
+  - UIライブラリを利用することが多い
 @ul
 
 ---
@@ -332,7 +331,6 @@ class MyAppBar extends StatelessWidget {
 @ul[list-spaced-sm-bullets, drag=90, drop=5 10, fit=1.5](false)
 - Flutterはアプリ開発に必要な機能、運用フローが整っている
 - Flutterの不採用理由に機能不足が入ることは少ない印象
-- JavaScript資産をどのくらい使いたいかでReact Nativeと棲み分けになりそう
 @ul
 
 ---
