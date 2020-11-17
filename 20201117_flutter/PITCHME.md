@@ -134,7 +134,7 @@ flutter: # アプリの基本Theme、フォントの情報を追加できる
 [drag=50 20, drop=top, pad=0px]
 ## React Native
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
 - ネイティブのレンダリングエンジンを利用
 - React NativeのコンポーネントがネイティブのUIと一致している
   - React NativeのView は Androidの `android.view` であり iOSの `UIView`
@@ -145,7 +145,7 @@ flutter: # アプリの基本Theme、フォントの情報を追加できる
 [drag=50 20, drop=top, pad=0px]
 ## Flutter
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
 - Flutterは FWのAPIを担うflutter/flutterと描画周りの flutter/engineがある
 - flutter/engineは独自のレンダリングエンジンになっている
 @ul
@@ -244,7 +244,7 @@ class MyAppBar extends StatelessWidget {
 [drag=50 20, drop=top, pad=0px]
 ## React Native
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
 - ローカルはhooksを利用
 - GlobalにはRedux, Mobx, Recoil, Rxが選択肢に上がる
 - Storeを一つ持って各コンポーネントが参照、更新する
@@ -255,7 +255,7 @@ class MyAppBar extends StatelessWidget {
 [drag=50 20, drop=top, pad=0px]
 ## Flutter
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
 - ローカルはFlutter向けのhooksを利用（パッケージ）
 - Global Stateは複数の実装方法がある
   - Redux, RxDart
@@ -315,18 +315,21 @@ class MyAppBar extends StatelessWidget {
 
 ---
 
-[drag=50 20, drop=top, pad=0px]
+[drag=80 20, drop=top, pad=0px]
 ## React Nativeとの棲み分けは？
+
+@ul[list-spaced-sm-bullets, drag=90, drop=5 10, fit=1.5](false)
 - エコシステムの観点だとFlutterに軍配が上がりそう
 - JavaScript資産をWebと共有したい場合はReact Nativeが良さそう
 - Flutter for webに期待
+@ul
 
 ---
 
 [drag=50 20, drop=top, pad=0px]
 ## まとめ
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=90, drop=5 10, fit=1.5](false)
 - Flutterはアプリ開発に必要な機能、運用フローが整っている
 - Flutterの不採用理由に機能不足が入ることは少ない印象
 - JavaScript資産をどのくらい使いたいかでReact Nativeと棲み分けになりそう
@@ -342,6 +345,6 @@ class MyAppBar extends StatelessWidget {
 - 著名なFlutterエンジニアのTwitter
   - @_mono さん
   - @razokulover さん
-- 上記の方のブログ
+- monoさんのMedium
   - https://medium.com/flutter-jp/
 @ul
