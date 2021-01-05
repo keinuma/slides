@@ -28,10 +28,10 @@
 
 ---
 
-[drag=80 10, drop=top, pad=0px]
+[drag=80 10, drop=10 5, pad=0px]
 ## Firestoreのデータ構造
 
-![drag=60 85, drop=20 15, fit=1.1, stretch=true](20210105_firestore/image/structure-data.png)
+![drag=60 85, drop=20 15, fit=1.0, stretch=true](20210105_firestore/image/structure-data.png)
 
 ---
 
@@ -79,7 +79,7 @@ collection
 
 ---
 
-[drag=80 10, drop=10 2, pad=0px]
+[drag=80 10, drop=10 5, pad=0px]
 ## 参照(変更を検知)
 
 [drag=90 90, drop=5 10, pad=10px]
@@ -161,7 +161,7 @@ const convertCollection =  collection.withConverter(converter)
 
 ---
 
-[drag=90 10, drop=top]
+[drag=90 10, drop=5 5]
 ## Firestoreのメソッドをラップ
 
 [drag=90 90, drop=5 15, fit=0.9, pad=0px]
@@ -170,16 +170,13 @@ class FirestoreRepository {
   private readonly collection
 
   constructor(path, converter) {
-    this.collection = db
-      .collection(path)
+    this.collection = db.collection(path)
       .withConverter(converter)
   }
 
   subscribeById(id, callback) {
     return this.collection.doc(id).onSnapshot(
-      (snapshot) => {
-        callback(snapshot.data())
-      }
+      (snapshot) => callback(snapshot.data())
     )
   }
 }
