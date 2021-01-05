@@ -13,5 +13,5 @@ LT・勉強会用の資料置き場
 
 # ローカル起動
 ```bash
-$ docker run -it -v $PWD:/slides -p 9000:9000 gitpitch/trial
+$ docker run -it -v $PWD:/slides -p 9000:9000 gitpitch/4.0
 ```
