@@ -1,6 +1,6 @@
 [drag=300 30, drop=center, flow=col true]
 
-## Flutter と React Native 比較してみた
+## Flutter と React Native 比較
 
 2020/11/17 沼田
 
@@ -11,7 +11,7 @@
 
 @ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
 - カミナシではReact Native + Expoを利用してる
-- FlutterはReact Nativeと比較すると何が嬉しい？
+- FlutterはReact Nativeと比較すると何が嬉しいか知りたい
 - 開発・運用観点でまとめてみた
 @ul
 
@@ -21,9 +21,8 @@
 ## 結論
 
 @ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
-- Flutterはアプリ開発に必要な機能、運用フローが整っている
+- Flutterはエコシステムが充実していてアプリ開発に必要な機能が整っている
 - 日本の事例が少ないが今後も増えてきそう
-- JavaScript資産をどのくらい使いたいかでReact Nativeと棲み分けになりそう
 @ul
 
 ---
@@ -39,17 +38,17 @@ React Nativeで補えない部分はExpoと比較してお話します
 ## 比較ポイント
 
 @ul[list-spaced-sm-bullets, drag=100 100, drop=-5 10, fit=1.6](false)
+1. 　基本情報
 1. 　開発環境
 2. 　UI
 3. 　状態管理
 4. 　テスト
-5. 　情報収集
 @ul
 
 ---
 
 [drag=100, drop=center, fit=1.3]
-そもそも
+## 基本情報
 
 ---
 
@@ -57,8 +56,7 @@ React Nativeで補えない部分はExpoと比較してお話します
 |  | Flutter | React Native |
 | --- | --- | --- |
 | 企業 | Google | Facebook |
-| 言語 | Dart | React Native |
-| アーキテクチャ | Reactive | Reactive |
+| 言語 | Dart | JavaScript |
 | GitHubスター数 | 107k | 91.3k |
 
 ---
@@ -75,7 +73,7 @@ React Nativeで補えない部分はExpoと比較してお話します
 - パッケージ管理は npm or yarn
 - Lint + Formatter は ESLint + Prettier
 - ホットリロード
-- リリースはExpo CLIが便利
+- 開発、リリースはExpo CLIが便利
 @ul
 
 ---
@@ -135,8 +133,8 @@ flutter: # アプリの基本Theme、フォントの情報を追加できる
 [drag=50 20, drop=top, pad=0px]
 ## React Native
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
-- ネイティブのレンダリングエンジンを利用
+@ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
+- Reactのコア部分を利用してレンダリング
 - React NativeのコンポーネントがネイティブのUIと一致している
   - React NativeのView は Androidの `android.view` であり iOSの `UIView`
 @ul
@@ -146,7 +144,7 @@ flutter: # アプリの基本Theme、フォントの情報を追加できる
 [drag=50 20, drop=top, pad=0px]
 ## Flutter
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
 - Flutterは FWのAPIを担うflutter/flutterと描画周りの flutter/engineがある
 - flutter/engineは独自のレンダリングエンジンになっている
 @ul
@@ -174,7 +172,7 @@ flutter: # アプリの基本Theme、フォントの情報を追加できる
 - Styleを使ってCSS Likeにレイアウト、見た目を変えられる
 - 宣言的な記述
 - React Native自体は最低限のコンポーネントのみ
-  - UIコンポーネントを利用することが多い
+  - UIライブラリを利用することが多い
 @ul
 
 ---
@@ -245,7 +243,7 @@ class MyAppBar extends StatelessWidget {
 [drag=50 20, drop=top, pad=0px]
 ## React Native
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
 - ローカルはhooksを利用
 - GlobalにはRedux, Mobx, Recoil, Rxが選択肢に上がる
 - Storeを一つ持って各コンポーネントが参照、更新する
@@ -256,7 +254,7 @@ class MyAppBar extends StatelessWidget {
 [drag=50 20, drop=top, pad=0px]
 ## Flutter
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=80, drop=10 20, fit=1.5](false)
 - ローカルはFlutter向けのhooksを利用（パッケージ）
 - Global Stateは複数の実装方法がある
   - Redux, RxDart
@@ -316,13 +314,23 @@ class MyAppBar extends StatelessWidget {
 
 ---
 
+[drag=80 20, drop=top, pad=0px]
+## React Nativeとの棲み分けは？
+
+@ul[list-spaced-sm-bullets, drag=90, drop=5 10, fit=1.5](false)
+- エコシステムの観点だとFlutterに軍配が上がりそう
+- JavaScript資産をWebと共有したい場合はReact Nativeが良さそう
+- Flutter for webに期待
+@ul
+
+---
+
 [drag=50 20, drop=top, pad=0px]
 ## まとめ
 
-@ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
+@ul[list-spaced-sm-bullets, drag=90, drop=5 10, fit=1.5](false)
 - Flutterはアプリ開発に必要な機能、運用フローが整っている
 - Flutterの不採用理由に機能不足が入ることは少ない印象
-- JavaScript資産をどのくらい使いたいかでReact Nativeと棲み分けになりそう
 @ul
 
 ---
@@ -335,6 +343,6 @@ class MyAppBar extends StatelessWidget {
 - 著名なFlutterエンジニアのTwitter
   - @_mono さん
   - @razokulover さん
-- 上記の方のブログ
+- monoさんのMedium
   - https://medium.com/flutter-jp/
 @ul
