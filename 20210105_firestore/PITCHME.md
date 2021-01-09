@@ -10,7 +10,7 @@
 ## 今日話すこと
 
 @ul[list-spaced-sm-bullets, drag=100, drop=0 10, fit=1.5](false)
-- Firebaseとは
+- Firestoreとは
 - クライアントによるFirestoreの使い方
 - Firestoreを考慮したクライアントの設計
 @ul
@@ -89,7 +89,7 @@ const firestore = firebase.firestore()
 const collection = firestore.collection('messages')
 const unsubscribe = collection
   .where('uids', 'array-contains', 'xxxx-xxx-xxx')
-  .get()
+  .onSnapshot()
   .then((snapshot) => {
     const data = snapshot.data()
     console.log(data)
